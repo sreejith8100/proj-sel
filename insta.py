@@ -16,7 +16,7 @@ class LoginPage:
 
 def test_login_page(browser):
     login_page = LoginPage(browser)
-    login_page.login("sreejith_81", "sreejith@8100")
+    login_page.login("user", "pass") #Enter the username and password
 
     errors = browser.find_elements_by_css_selector('#error_message')
     assert len(errors) == 0
